@@ -13,7 +13,7 @@
         document.body.innerHTML = "Failed to redirect"
       } else {
         const a = document.createElement("a");
-        a.href = url.substr(index + identifier.length);
+        a.href = decodeURIComponent(url.substr(index + identifier.length));
         a.click()
       }
     };
