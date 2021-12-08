@@ -5,16 +5,18 @@
   <title>Redirecting</title>
 
   <script type="text/javascript">
-    const identifier = "url=";
-    const url = window.location.href.toString();
-    const index = url.lastIndexOf(identifier);
-    if (index == -1) {
-      document.body.innerHTML = "Failed to redirect"
-    } else {
-      const a = document.createElement("a");
-      a.href = url.substr(index + identifier.length);
-      a.click()
-    }
+    window.onload = function () {
+      const identifier = "url=";
+      const url = window.location.href.toString();
+      const index = url.lastIndexOf(identifier);
+      if (index == -1) {
+        document.body.innerHTML = "Failed to redirect"
+      } else {
+        const a = document.createElement("a");
+        a.href = url.substr(index + identifier.length);
+        a.click()
+      }
+    };
   </script>
 </head>
 
