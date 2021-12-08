@@ -1,5 +1,5 @@
 # gotolink
-Redirect to url parameter with no condition.
+Redirects to the URL referred by parameter `url` with no condition.
 
 ## Usage:
 1. Encode your URL
