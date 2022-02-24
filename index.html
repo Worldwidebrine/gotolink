@@ -7,13 +7,13 @@
   <script type="text/javascript">
     window.onload = function () {
       const identifier = "url=";
-      const url = window.location.href.toString();
+      const url = String(window.location.href);
       const index = url.lastIndexOf(identifier);
       if (index == -1) {
         document.body.innerHTML = "Failed to redirect"
       } else {
         const a = document.createElement("a");
-        a.href = decodeURIComponent(url.substr(index + identifier.length));
+        a.href = decodeURIComponent(url.slice(index + identifier.length));
         a.click()
       }
     };
